@@ -33,6 +33,12 @@ setopt INC_APPEND_HISTORY SHARE_HISTORY  # adds history incrementally and share 
 setopt HIST_IGNORE_ALL_DUPS  # don't record dupes in history
 setopt HIST_REDUCE_BLANKS
 
+export RUBY_GC_MALLOC_LIMIT=90000000
+export RUBY_FREE_MIN=200000
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+# ENABLE_CORRECTION="true"
+# HIST_STAMPS="yyyy-mm-dd"
+
 # don't expand aliases _before_ completion has finished
 #   like: git comm-[tab]
 setopt complete_aliases

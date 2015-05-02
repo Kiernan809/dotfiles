@@ -1,8 +1,14 @@
+# Which plugins
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+ZSH_THEME="robbyrussell"
+
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
 
 # your project folder that we can `c [tab]` to
-export PROJECTS=~/Code
+export PROJECTS=~/Sites
 
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
