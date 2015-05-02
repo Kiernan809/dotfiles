@@ -26,28 +26,6 @@ fail () {
   exit
 }
 
-setup_gitconfig () {
-  if ! [ -f git/gitconfig.symlink ]
-  then
-    info 'setup gitconfig'
-
-    git_credential='cache'
-    if [ "$(uname -s)" == "Darwin" ]
-    then
-      git_credential='osxkeychain'
-    fi
-
-    user ' - What is your github author name?'
-    read -e git_authorname
-    user ' - What is your github author email?'
-    read -e git_authoremail
-
-    sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" git/gitconfig.symlink.example > git/gitconfig.symlink
-
-    success 'gitconfig'
-  fi
-}
-
 link_files () {
   ln -s $1 $2
   success "linked $1 to $2"
@@ -120,7 +98,7 @@ install_dotfiles () {
   done
 }
 
-setup_gitconfig
+# setup_gitconfig
 install_dotfiles
 
 # If we are on a mac, lets install and setup homebrew
@@ -134,6 +112,24 @@ then
     fail "error installing dependencies"
   fi
 fi
+
+if [ ! -d "$HOME/.rvm" ]; then
+  echo 'getting RVM'
+  curl -sSL https://get.rvm.io | bash -s stable
+fi
+
+if [ ! -d "$HOME/.nvm" ]; then
+  echo 'getting NVM'
+  curl https://raw.githubusercontent.com/creationix/nvm/v0.25.0/install.sh | bash
+fi
+
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+  echo 'getting Oh my ZSH'
+  curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+fi
+
+
+
 
 echo ''
 echo '  All installed!'
