@@ -1,0 +1,5 @@
+[
+  { "keys": ["ctrl+shift+]"], "command": "reindent" },
+  { "keys": ["ctrl+alt+g"], "command": "find_all_under" },
+  { "keys": ["ctrl+shift+a"], "command": "alignment" }
+]

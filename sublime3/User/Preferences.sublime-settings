@@ -1,0 +1,48 @@
+{
+	"bold_folder_labels": true,
+	"color_inactive_tabs": true,
+	"color_scheme": "Packages/User/SublimeLinter/Afterglow-twilight (SL).tmTheme",
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		"*.png",
+		"*.gif",
+		".DS_Store",
+		".rspec",
+		"config.ru",
+		"Gemfile.lock",
+		"Rakefile"
+	],
+	"folder_exclude_patterns":
+	[
+		".bundle",
+		".git",
+		".sass-cache",
+		"doc",
+		"log",
+		"script",
+		".svn"
+	],
+	"font_face": "Envy Code R",
+	"font_size": 12,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"hot_exit": false,
+	"ignored_packages":
+	[
+		"Vintage",
+		"Drupal",
+		"JavaScript"
+	],
+	"line_padding_bottom": 0,
+	"line_padding_top": 0,
+	"remember_open_files": false,
+	"save_on_focus_lost": true,
+	"tab_size": 2,
+	"tabs_medium": true,
+	"theme": "Afterglow-blue.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_automatic_white_space": true,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": "false"
+}

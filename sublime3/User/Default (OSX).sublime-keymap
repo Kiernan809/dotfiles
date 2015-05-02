@@ -1,0 +1,5 @@
+[
+  { "keys": ["super+alt+]"], "command": "reindent" },
+  { "keys": ["ctrl+super+l"], "command": "sublimelinter_show_all_errors" },
+  // { "keys": ["ctrl+super+a"], "command": ""}
+]
