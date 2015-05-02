@@ -47,18 +47,6 @@ need_push () {
   fi
 }
 
-rb_prompt(){
-  if (( $+commands[rbenv] ))
-  then
-    version=$(rbenv version-name 2> /dev/null)
-    if [[ "$version" == "" ]] then version="-" fi
-
-    echo "%{$fg_bold[yellow]%}$version%{$reset_color%}"
-  else
-    echo ""
-  fi
-}
-
 # This keeps the number of todos always available the right hand side of my
 # command line. I filter it to only count those tagged as "+next", so it's more
 # of a motivation to clear out the list.
@@ -82,7 +70,7 @@ directory_name(){
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }
 
-export PROMPT=$'\n$(rb_prompt) in $(directory_name) $(git_dirty)$(need_push)\n› '
+export PROMPT=$'\n$(directory_name) $(git_dirty)$(need_push)\n› '
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}$(todo)%{$reset_color%}"
 }
