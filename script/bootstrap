@@ -98,6 +98,11 @@ install_dotfiles () {
   done
 }
 
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+  echo 'getting Oh my ZSH'
+  curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+fi
+
 # setup_gitconfig
 install_dotfiles
 
@@ -113,6 +118,8 @@ then
   fi
 fi
 
+vim +PluginInstall +qall&
+
 if [ ! -d "$HOME/.rvm" ]; then
   echo 'getting RVM'
   curl -sSL https://get.rvm.io | bash -s stable
@@ -122,13 +129,6 @@ if [ ! -d "$HOME/.nvm" ]; then
   echo 'getting NVM'
   curl https://raw.githubusercontent.com/creationix/nvm/v0.25.0/install.sh | bash
 fi
-
-if [ ! -d "$HOME/.oh-my-zsh" ]; then
-  echo 'getting Oh my ZSH'
-  curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
-fi
-
-
 
 
 echo ''

@@ -55,11 +55,8 @@ set ruler
 set cmdheight=2
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
-set smartcase
-set magic
-set lazyredraw
-set showmatch
-set cursorline 
+set smartcase magic lazyredraw showmatch
+" set cursorline 
 
 " Use spaces instead of tabs
 set expandtab
@@ -84,3 +81,4 @@ set laststatus=2
 " Format the status line
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 
+command! Wq wq
