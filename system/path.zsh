@@ -1,4 +1,4 @@
-export PATH="./bin:/usr/local/bin:/usr/local/sbin:$HOME/.sfs:$ZSHELL/bin:$PATH"
+export PATH="./bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:$HOME/.sfs:$ZSHELL/bin:$PATH"
 
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
