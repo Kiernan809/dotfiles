@@ -81,6 +81,7 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 
 command! Wq wq
 
+map <leader>k :Explore<cr> 
 map <Leader>] gg=G
 let g:netrw_liststyle=3
 
