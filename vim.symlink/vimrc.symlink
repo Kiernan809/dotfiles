@@ -89,3 +89,10 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+function RunWith (command)
+  execute "w"
+  execute "!clear;time " . a:command . " " . expand("%")
+endfunction
+
+autocmd FileType ruby   nmap <F5> :call RunWith("ruby")<cr>
