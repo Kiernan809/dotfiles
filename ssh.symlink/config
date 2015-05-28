@@ -1,0 +1,30 @@
+Host *
+  Protocol 2
+  ServerAliveInterval 120
+  ServerAliveCountMax 6
+
+Host wf
+  HostName leekiernan.webfactional.com
+  User leekiernan
+
+Host wwf
+  HostName websir.webfactional.com
+  User websir
+
+Host mt
+  HostName s110646.gridserver.com
+  User yourweddingvenue.co.uk
+
+Host do
+  HostName 188.226.182.130
+  User root
+
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa
+
+Host github.mutu
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa_muturb
