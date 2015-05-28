@@ -16,9 +16,11 @@ Plugin 'scrooloose/syntastic'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+Plugin 'mattn/emmet-vim'
+" Plugin 'git@github.com:scrooloose/nerdtree.git'
 
 " Plugin 'file:///home/gmarik/path/to/plugin'
-" Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 " Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Plugin 'user/L9', {'name': 'newL9'}
 
@@ -54,7 +56,7 @@ set cmdheight=2
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 set smartcase magic lazyredraw showmatch
-" set cursorline 
+" set cursorline
 
 " Use spaces instead of tabs
 set expandtab
@@ -79,9 +81,12 @@ set laststatus=2
 " Format the status line
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 
-command! Wq wq
+:let mapleader = ","
 
-map <leader>k :Explore<cr> 
+command! Wq wq
+command! Q q
+
+" map <leader>k :Explore<cr>
 map <Leader>] gg=G
 let g:netrw_liststyle=3
 
@@ -89,12 +94,33 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+nnoremap ; :
+" nnoremap : ;
+
+nmap <leader>k :NERDTreeToggle<cr>
+nmap <leader>l :set list!<CR>
+set listchars=tab:▸\ ,eol:¬
 
 function RunWith (command)
   execute "w"
   execute "!clear;time " . a:command . " " . expand("%")
 endfunction
 
+function! <SID>StripTrailingWhitespaces()
+  " Preparation: save last search, and cursor position.
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  " Do the business:
+  %s/\s\+$//e
+  " Clean up: restore previous search history,
+  and cursor position
+  let @/=_s
+  call cursor(l, c)
+endfunction
+
 autocmd FileType ruby   nmap <F5> :call RunWith("ruby")<cr>
 autocmd BufRead *_spec.rb nmap <F6> :w\|!clear && rspec % --format documentation --color<cr>
+autocmd BufWritePre *.html,*.rb,*.scss,*.js :call <SID>StripTrailingWhitespaces()
+
 
