@@ -88,6 +88,10 @@ command! Q q
 
 " map <leader>k :Explore<cr>
 map <Leader>] gg=G
+map <C-[> :tabprevious<CR>
+map <C-]> :tabnext<CR>
+map <C-t> :tabnew<CR>
+
 let g:netrw_liststyle=3
 
 nnoremap <C-J> <C-W><C-J>
