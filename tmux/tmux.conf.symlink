@@ -37,3 +37,9 @@ bind-key C-a last-pane
 
 # Local config
 if-shell "[ -f ~/.tmux.conf.local ]" 'source ~/.tmux.conf.local'
+
+# window splitting
+# unbind %
+bind | split-window -h
+# unbind '"'
+bind - split-window -v
