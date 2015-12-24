@@ -1,1 +1,5 @@
 vim.symlink/bundle/*
+
+!/ssh.symlink
+/ssh.symlink/*
+!/ssh.symlink/config
