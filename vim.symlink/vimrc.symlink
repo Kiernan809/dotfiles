@@ -93,6 +93,7 @@ nmap <leader>k :NERDTreeToggle<cr>
 nmap <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
 
+map <C-n> :NERDTreeToggle<CR>
 nnoremap <C-n> :call NumberToggle()<cr>
 function! NumberToggle()
   if(&relativenumber == 1)
@@ -101,6 +102,10 @@ function! NumberToggle()
     set relativenumber
   endif
 endfunc
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 autocmd FileType ruby   nmap <F5> :call RunWith("ruby")<cr>
 autocmd BufRead *_spec.rb nmap <F6> :w\|!clear && rspec % --format documentation --color<cr>
