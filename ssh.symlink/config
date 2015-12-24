@@ -1,10 +1,12 @@
+HashKnownHosts = yes
+
 Host *
   Protocol 2
   ServerAliveInterval 120
   ServerAliveCountMax 6
 
 Host wf
-  HostName leekiernan.webfactional.com
+  HostName web503.webfaction.com
   User leekiernan
 
 Host wwf
