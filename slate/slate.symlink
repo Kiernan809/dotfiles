@@ -5,29 +5,41 @@ config defaultToCurrentScreen true
 config nudgePercentOf screenSize
 config resizePercentOf screenSize
 
-# Push Bindings
+# ===
+# OSX
+# ===
+# Slither 1/4 width, full height #
 bind right:ctrl;cmd;shift	  push 	  right 			    bar-resize:screenSizeX/4
 bind left:ctrl;cmd;shift    push 	  left  			    bar-resize:screenSizeX/4
 
+# Half width, full height #
 bind right:ctrl;cmd  		    push 	  right 			    bar-resize:screenSizeX/2
 bind left:ctrl;cmd   		    push 	  left  			    bar-resize:screenSizeX/2
+# Half height, full width #
 bind up:ctrl;cmd     		    push 	  up    			    bar-resize:screenSizeY/2
 bind down:ctrl;cmd   		    push 	  down  			    bar-resize:screenSizeY/2
 
+# Full page #
 bind up:ctrl;alt;cmd        corner  top-left        resize:screenSizeX;screenSizeY
+
+# Standard; 2/3 width, full height #
 bind left:ctrl;alt   		    corner 	top-left     	  resize:screenSizeX*0.75;screenSizeY
 bind right:ctrl;alt  		    corner 	top-right 	    resize:screenSizeX*0.75;screenSizeY
-# bind up:ctrl;alt            corner  top-right       resize:screenSizeX/2;screenSizeY/2
-# bind down:ctrl;alt   		    corner 	bottom-left  	  resize:screenSizeX/2;screenSizeY/2
 
+# fn key for quarter screen #
+bind d:alt              corner  top-right       resize:screenSizeX/2;screenSizeY/2
+bind a:alt              corner  bottom-left     resize:screenSizeX/2;screenSizeY/2
+bind w:alt              corner  top-left        resize:screenSizeX/2;screenSizeY/2
+bind s:alt              corner  bottom-right    resize:screenSizeX/2;screenSizeY/2
+
+# half height, quarter width; finder windows
 bind left:ctrl;alt;shift   	corner 	top-left     	  resize:screenSizeX/4;screenSizeY/2
 bind up:ctrl;alt;shift     	corner 	top-right    	  resize:screenSizeX/4;screenSizeY/2
 bind right:ctrl;alt;shift  	corner 	bottom-right 	  resize:screenSizeX/4;screenSizeY/2
 bind down:ctrl;alt;shift   	corner 	bottom-left  	  resize:screenSizeX/4;screenSizeY/2
 
-
-bind up:cmd;alt;shift 	 	  nudge 	 +0     -12.5%
-bind right:cmd;alt;shift 	  nudge 	 +12.5% +0
-bind down:cmd;alt;shift  	  nudge 	 +0     +12.5%
-bind left:cmd;alt;shift  	  nudge 	 -12.5% +0
-
+# Move window by 1/8 screen
+bind up:cmd;alt;shift 	 	  nudge 	 +0        -12.5%
+bind right:cmd;alt;shift 	  nudge 	 +12.5%    +0
+bind down:cmd;alt;shift  	  nudge 	 +0        +12.5%
+bind left:cmd;alt;shift  	  nudge 	 -12.5%    +0
