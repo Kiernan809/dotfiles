@@ -120,15 +120,15 @@ fi
 
 vim +PluginInstall +qall&
 
-if [ ! -d "$HOME/.rvm" ]; then
-  echo 'getting RVM'
-  curl -sSL https://get.rvm.io | bash -s stable
-fi
-
-if [ ! -d "$HOME/.nvm" ]; then
-  echo 'getting NVM'
-  curl https://raw.githubusercontent.com/creationix/nvm/v0.25.0/install.sh | bash
-fi
+# if [ ! -d "$HOME/.rvm" ]; then
+#   echo 'getting RVM'
+#   curl -sSL https://get.rvm.io | bash -s stable
+# fi
+#
+# if [ ! -d "$HOME/.nvm" ]; then
+#   echo 'getting NVM'
+#   curl https://raw.githubusercontent.com/creationix/nvm/v0.25.0/install.sh | bash
+# fi
 
 
 echo ''
