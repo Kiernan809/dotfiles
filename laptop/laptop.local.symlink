@@ -5,15 +5,25 @@ cask_args appdir: '/Applications'
 brew_tap 'caskroom/cask'
 tap 'homebrew/bundle'
 
+brew_install_or_upgrade 'ack'
 brew_install_or_upgrade 'brew-cask'
+brew_install_or_upgrade 'jp2a'
+brew_install_or_upgrade 'libcaca', args: ['with-imlib2']
+brew_install_or_upgrade 'libgit2'
+brew_install_or_upgrade 'readline'
+brew_install_or_upgrade 'roundup'
 brew_install_or_upgrade 'tree'
 
 brew cask install 1password
 brew cask install alfred
 brew cask install caffeine
 brew cask install dropbox
+brew cask install flux
+brew cask install forklift
 brew cask install google-chrome
 brew cask install handbrake
+brew cask install iterm2
+brew cask install private-internet-access
 brew cask install slack
 brew cask install slate
 brew cask install spotify
