@@ -3,3 +3,7 @@ vim.symlink/bundle/*
 !/ssh.symlink
 /ssh.symlink/*
 !/ssh.symlink/config
+
+!/vim.symlink
+/vim.symlink/*
+!/vim.symlink/vimrc.symlink

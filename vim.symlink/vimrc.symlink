@@ -1,32 +1,21 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
+" Plug 'L9'
+Plug 'airblade/vim-gitgutter'
+Plug 'bling/vim-airline'
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-rails'
+Plug 'mattn/emmet-vim'
+call plug#end()
 
-Plugin 'VundleVim/Vundle.vim'
-
-" Keep Plugin commands between vundle#begin/end.
-Plugin 'L9'
-" Plugin 'Lokaltog/vim-easymotion'
-Plugin 'airblade/vim-gitgutter'
-" Plugin 'altercation/vim-colors-solarized'
-Plugin 'bling/vim-airline'
-" Plugin 'git://git.wincent.com/command-t.git'
-Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/syntastic'
-" Plugin 'tomtom/tcomment_vim'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-rails'
-Plugin 'mattn/emmet-vim'
-" Plugin 'scrooloose/nerdtree'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+filetype plugin indent on 
 
 " To ignore plugin indent changes, instead use:
 " filetype plugin on
@@ -112,7 +101,7 @@ endfunc
 " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-autocmd BufWritePre * :%s/\s\+$//e
+" autocmd BufWritePre * :%s/\s\+$//e
 
 autocmd FileType ruby   nmap <F5> :call RunWith("ruby")<cr>
 autocmd BufRead *_spec.rb nmap <F6> :w\|!clear && rspec % --format documentation --color<cr>
@@ -124,8 +113,7 @@ function! <SID>StripTrailingWhitespaces()
   let c = col(".")
   " Do the business:
   %s/\s\+$//e
-  " Clean up: restore previous search history,
-  and cursor position
+  " Clean up: restore previous search history, and cursor position
   let @/=_s
   call cursor(l, c)
 endfunction
