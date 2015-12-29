@@ -1,0 +1,22 @@
+#!/bin/sh
+
+cask_args appdir: '/Applications'
+
+brew_tap 'caskroom/cask'
+tap 'homebrew/bundle'
+
+brew_install_or_upgrade 'brew-cask'
+brew_install_or_upgrade 'tree'
+
+brew cask install 1password
+brew cask install alfred
+brew cask install caffeine
+brew cask install dropbox
+brew cask install google-chrome
+brew cask install handbrake
+brew cask install slack
+brew cask install slate
+brew cask install spotify
+brew cask install steam
+brew cask install transmission
+brew cask install vlc
