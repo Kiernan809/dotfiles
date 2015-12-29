@@ -2,7 +2,7 @@
 #
 
 [hub]
-    protocol          = https
+    # protocol          = https
 
 [user]
     name              = Kiernan809
