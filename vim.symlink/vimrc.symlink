@@ -13,6 +13,9 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rails'
 Plug 'mattn/emmet-vim'
+Plug 'thoughtbot/vim-rspec'
+Plug 'gabebw/vim-spec-runner'
+Plug 'christoomey/vim-tmux-runner'
 call plug#end()
 
 filetype plugin indent on 
