@@ -5,3 +5,5 @@ alias sc="screen"
 alias tm="tmux"
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 alias rb="ruby"
+
+alias cls='clear' # Good 'ol Clear Screen command

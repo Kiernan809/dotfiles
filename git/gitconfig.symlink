@@ -1,60 +1,33 @@
-# Sample gitconfig
-#
-
+# Local/private config goes in the include
+[include]
+        path = ~/.gitconfig.local
 [hub]
-    # protocol          = https
-
-[user]
-    name              = Kiernan809
-    email             = lee.kiernan@gmail.com
-
-[credential]
-    helper            = osxkeychain
-
+        protocol = https
 [alias]
-    br                = branch
-    ci                = commit
-    cl                = clone
-    count             = !git shortlog -sn
-    co                = checkout
-    df                = diff
-    graphviz          = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
-    k                 = !gitk
-    lg                = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-    who               = shortlog -s --
-    promote           = !$ZSHELL/bin/git-promote
-    rank-contributers = !$ZSHELL/bin/git-rank-contributers
-    st                = status
-    wtf               = !$ZSHELL/bin/git-wtf
-    muturb            = !git config user.name "muturb" && git config user.email "lee@mutu.me"
-    lk                = !git config user.name "Kiernan809" && git config user.email "lee.kiernan@gmail.com"
-
-
+        co = checkout
+        promote = !$ZSH/bin/git-promote
+        wtf     = !$ZSH/bin/git-wtf
+        rank-contributors = !$ZSH/bin/git-rank-contributors
+        count   = !git shortlog -sn
 [color]
-    diff              = auto
-    status            = auto
-    branch            = auto
-    ui                = true
-
+        diff = auto
+        status = auto
+        branch = auto
+        ui = true
 [core]
-    excludesfile      = ~/.gitignore
-    editor            = vim
-
+        excludesfile = ~/.gitignore
+        editor = vim
 [apply]
-    whitespace        = nowarn
-
+        whitespace = nowarn
 [mergetool]
-    keepBackup        = false
-
+        keepBackup = false
 [difftool]
-    prompt            = false
-
+        prompt = false
 [help]
-    autocorrect       = 1
-
+        autocorrect = 1
 [push]
         # See `git help config` (search for push.default)
         # for more information on different options of the below setting.
         #
-        # Setting to git 2.0 default to surpress warning message
-    default           = simple
+        # Setting to git 2.0 default to suppress warning message
+        default = simple
