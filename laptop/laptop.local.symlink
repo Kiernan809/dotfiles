@@ -1,22 +1,28 @@
 #!/bin/sh
 
-cask_args appdir: '/Applications'
+# cask_args appdir: '/Applications'
+export HOMEBREW_CASK_OPTS="--appdir=~/Applications --caskroom=/etc/Caskroom"
 
-brew_tap 'caskroom/cask'
-tap 'homebrew/bundle'
+brew tap 'caskroom/cask'
+brew tap 'homebrew/bundle'
 
-brew 'ack'
-brew 'brew-cask'
-brew 'jp2a'
-brew 'libcaca', args: ['with-imlib2']
-brew 'libgit2'
-brew 'readline'
-brew 'roundup'
-brew 'tree'
+brew install ack
+brew install coreutils
+brew install brew-cask
+brew install jp2a
+brew install libcaca, args: ['with-imlib2']
+brew install libgit2
+brew install readline
+brew install sqlite
+brew install roundup
+brew install tree
+brew install unrar
+brew install wget
 
 brew cask install 1password
 brew cask install alfred
 brew cask install caffeine
+brew cask install docker
 brew cask install dropbox
 brew cask install flux
 brew cask install forklift
@@ -27,5 +33,9 @@ brew cask install slack
 brew cask install slate
 brew cask install spotify
 brew cask install steam
+brew cask install sublime-text
 brew cask install transmission
 brew cask install vlc
+
+rm -rf ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+ln -s ~/.dotfiles/sublime-text/ ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/

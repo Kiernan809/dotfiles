@@ -1,0 +1,37 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"Alignment",
+		"Babel",
+		"Base16 Color Schemes",
+		"Better CoffeeScript",
+		"Better JavaScript",
+		"BracketHighlighter",
+		"Emmet",
+		"FileDiffs",
+		"Haml",
+		"Handlebars",
+		"JavaScriptNext - ES6 Syntax",
+		"JsFormat",
+		"LESS",
+		"MarkdownEditing",
+		"Material Theme",
+		"Modific",
+		"Package Control",
+		"Pretty JSON",
+		"Sass",
+		"SCSS",
+		"SideBarEnhancements",
+		"Theme - Afterglow",
+		"Theme - Flatland",
+		"Theme - SoDaReloaded",
+		"Twig",
+		"TWiki",
+		"TypeScript"
+	]
+}
