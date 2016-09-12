@@ -16,6 +16,7 @@ Plug 'mattn/emmet-vim'
 Plug 'thoughtbot/vim-rspec'
 Plug 'gabebw/vim-spec-runner'
 Plug 'christoomey/vim-tmux-runner'
+Plug 'leafgarland/typescript-vim'
 call plug#end()
 
 filetype plugin indent on 
@@ -37,7 +38,7 @@ syntax on
 syntax enable
 
 " colorscheme solarized
-colorscheme desert
+colorscheme tomorrow-night-eighties
 set background=dark
 
 " brew install the_silver_searcher
@@ -85,6 +86,8 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 nnoremap ; :
+nnoremap <leader>ev :vsp $MYVIMRC<CR> " type,evto edit the Vimrc
+
 
 nmap <leader>k :NERDTreeToggle<cr>
 nmap <leader>l :set list!<CR>
@@ -121,3 +124,4 @@ function! <SID>StripTrailingWhitespaces()
   call cursor(l, c)
 endfunction
 
+command E Explore

@@ -5,20 +5,8 @@ Host *
   ServerAliveInterval 120
   ServerAliveCountMax 6
 
-Host wf
-  HostName web503.webfaction.com
-  User leekiernan
-
-Host wwf
-  HostName websir.webfactional.com
-  User websir
-
-Host mt
-  HostName s110646.gridserver.com
-  User yourweddingvenue.co.uk
-
 Host do
-  HostName 188.226.182.130
+  HostName 139.59.173.29
   User root
 
 Host github.com
@@ -30,3 +18,7 @@ Host github.mutu
   HostName github.com
   User git
   IdentityFile ~/.ssh/id_rsa_muturb
+
+Host wf
+  HostName web503.webfaction.com
+  User leekiernan

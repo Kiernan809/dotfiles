@@ -26,9 +26,6 @@
     rank-contributers = !$ZSHELL/bin/git-rank-contributers
     st                = status
     wtf               = !$ZSHELL/bin/git-wtf
-    muturb            = !git config user.name "muturb" && git config user.email "lee@mutu.me"
-    lk                = !git config user.name "Kiernan809" && git config user.email "lee.kiernan@gmail.com"
-
 
 [color]
     diff              = auto
