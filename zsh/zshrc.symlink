@@ -47,3 +47,10 @@ do
 done
 
 unset config_files
+
+export PATH="$HOME/.bin:$PATH"
+eval "$(rbenv init - --no-rehash)"
+
+eval "$(pyenv init -)"
+
+eval "$(nodenv init -)"
